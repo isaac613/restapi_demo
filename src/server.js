@@ -4,13 +4,13 @@ const cors = require("cors");
 const { userRouter } = require("./routes/users");
 const { postRouter } = require("./routes/posts");
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5001;
 // init instance of express
 // middleware
 const app = express();
 
 app.use(express.json());
-app.use(cors);
+app.use(cors());
 app.use(userRouter);
 app.use(postRouter);
 
